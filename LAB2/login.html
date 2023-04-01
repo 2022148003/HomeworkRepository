@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!-- Login Page -->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> IPSHOP </title>
+        <link rel ="stylesheet" type = "text/css" href = "main.css">
+    </head>
+    <body>
+        <header>
+            <h1> IPSHOP : FOR ALL YOUR IP NEEDS </h1>
+        </header>
+        <main>
+            <table>
+                <tr>
+                    <th> <div class = "button_p" > Log In </div> </th>
+                    <th> <a href = "signup.html"><div class = "button_np"> Sign Up </div></a> </th>
+                </tr>
+            </table>
+            <hr>
+            
+            <form method = "GET" action="http://example.com">
+                <table class = "width50">
+                    <tr>
+                        <th class = "neonblue" colspan = "3"> USER INFORMATION </th>
+                    </tr>
+                    <tr>
+                        <th><label for="userid">USER ID</label></th>
+                        <!-- separated the words and the colons to maintain layout even when resized -->
+                        <th class="alignleft"> : </th>
+                        <th><input type="text" id="userid" name="userid" placeholder="INPUT USER ID" required></th>
+                    </tr>
+                    <tr>
+                        <th><label for="password">PASSWORD</label></th>
+                        <th class="alignleft"> : </th>
+                        <th><input type="password" id="password" name="password" placeholder="INPUT PASSWORD" required></th>
+                    </tr>
+                    <tr>
+                        <th><label for="cfpassword">CONFIRM PASSWORD</label></th>
+                        <th class="alignleft"> : </th>
+                        <th><input type="password" id="cfpassword" name="cfpassword" placeholder="CONFIRM PASSWORD" required></th>
+                    </tr>
+                    <tr>
+                        <th class="alignright"><input class = "confirmbutton" type="submit" value = "LOG IN"></th>
+                        <th></th>
+                        <th class="alignleft"><input class = "cancelbutton" type="reset" value = "CLEAR"></th>
+                    </tr>
+                </table>
+            </form>        
+        </main>
+    </body>
+</html>

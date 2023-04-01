@@ -1,0 +1,58 @@
+/* style sheet for IP HW2 */
+
+/* properties "background-color", "font-size", "font-family", "color" used (4/10) */
+body{
+    text-align: center; background-color: black; color:white; font-size: 15px; font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+h1{
+    color:white; font-size: 40px; font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+/* properties "text-align", "border" used (6/10) */
+div{
+    border: 1em solid; text-align: center; border-width: medium; 
+}
+table{
+    width: 100%; align-self: center;
+}
+table tr th{
+    color:white; font-size: 20px; font-family: Verdana, Geneva, Tahoma, sans-serif; margin: 5px;
+}
+form{
+    text-align: center;
+}
+hr{
+    color:#04d9ff; border-color:#04d9ff; background-color: #04d9ff; height: 2px;
+}
+label{
+    color:white; font-size: 20px; font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.button_p{
+    border-color: blue; width: 100%; color:blue;
+}
+.button_np{
+    border-color: #04d9ff; width: 100%; color:#04d9ff;
+}
+.width50{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+.neonblue{
+    color:#04d9ff;
+}
+.alignleft{
+    text-align: left;
+}
+.alignright{
+    text-align: right;
+}
+/* properties "padding", "margin", "height", "width" used (10/10) */
+.confirmbutton{
+    padding: .5em; margin: .5em; height: 75%; border-color: #04d9ff; width: 200px; color:white; 
+    font-size: 20px; background-color: black;
+}
+.cancelbutton{
+    padding: .5em; margin: .5em; height: 75%; border-color: #FA008A; width: 200px; color:white; 
+    font-size: 20px; background-color: black;
+}

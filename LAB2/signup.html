@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> IPSHOP </title>
+        <link rel ="stylesheet" type = "text/css" href = "main.css">
+    </head>
+    <body>
+        <header>
+            <h1> IPSHOP : FOR ALL YOUR IP NEEDS </h1>
+        </header>
+        <main>
+            <table>
+                <tr>
+                    <!-- button that links to login.html -->
+                    <th> <a href = "login.html"><div class = "button_np" > Log In </div></a> </th>
+                    <th> <div class = "button_p"> Sign Up </div></th>
+                </tr>
+            </table>
+            <hr>
+            
+            <form method = "GET" action="http://example.com">
+                <table class = "width50">
+                    <tr>
+                        <th class = "neonblue" colspan = "3"> USER INFORMATION (REQUIRED)</th>
+                    </tr>
+                    <tr>
+                        <th><label for="username">YOUR NAME</label></th>
+                        <!-- separated the words and the colons to maintain layout even when resized -->
+                        <th class="alignleft"> : </th>
+                        <!-- attribute "autofocus" used (1/5)-->
+                        <!-- input type "text" used (1/5)-->
+                        <th><input type="text" id="username" name="username" placeholder="YOUR NAME" required autofocus></th>
+                    </tr>
+                    <tr>
+                        <th><label for="birthday">BIRTHDAY (YYYY-MM-DD) </label></th>
+                        <th class="alignleft"> : </th>
+                        <!-- attribute "required" used (2/5)-->
+                        <!-- input type "date" used (2/5)-->
+                        <th><input type="date" id="birthday" name="birthday" required></th>
+                    </tr>
+                    <tr>
+                        <th><label for="grade">GRADE</label></th>
+                        <th class="alignleft"> : </th>
+                        <!-- attribute "step" used (3/5)-->
+                        <!-- input type "number" used (3/5)-->
+                        <th><input type="number" id="grade" name="grade" placeholder="YOUR GRADE" min = "0" max = "4" step = "1" value = "0" required></th>
+                    </tr>
+                    <tr>
+                        <th><label for="tel">TEL ((###) ####-####) </label></th>
+                        <th class="alignleft"> : </th>
+                        <!-- attribute "placeholder" used (4/5)-->
+                        <!-- input type "tel" used (4/5)-->
+                        <th><input type="tel" id="tel" name="tel" placeholder="(###) ####-####" pattern = "\(\d{3}\) \d{4}-\d{4}" required></th>
+                    </tr>
+                    <tr>
+                        <th><label for="userid">USER ID</label></th>
+                        <th class="alignleft"> : </th>
+                        <!-- attribute "autocomplete" used (5/5)-->
+                        <th><input type="text" id="userid" name="userid" placeholder="INPUT USER ID" required autocomplete="username"></th>
+                    </tr>
+                    <tr>
+                        <th><label for="password">PASSWORD</label></th>
+                        <th class="alignleft"> : </th>
+                        <!-- input type "password" used (5/5)-->
+                        <th><input type="password" id="password" name="password" placeholder="INPUT PASSWORD" required></th>
+                    </tr>
+                    <tr>
+                        <th><label for="cfpassword">CONFIRM PASSWORD</label></th>
+                        <th class="alignleft"> : </th>
+                        <th><input type="password" id="cfpassword" name="cfpassword" placeholder="CONFIRM PASSWORD" required></th>
+                    </tr>
+                    <tr>
+                        <th>
+                            DO YOU AGREE TO OUR
+                        </th>
+                        <th rowspan="2">
+                            :
+                        </th>
+                        <th rowspan="2">
+                            <!-- input type "radio" used (6/5)-->
+                            <!-- "radio" used (1/2)-->
+                            <input type="radio" id="choice1"
+                            name="tcagree" value="YES">
+                            <label for="choice1">AGREE</label>
+                            <input type="radio" id="choice2"
+                            name="tcagree" value="NO">
+                            <label for="choice2">DISAGREE</label>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th><a class = "neonblue" href = "http://www.example.com">TERMS AND CONDITIONS</a>?</th>
+                    </tr>
+                    <tr>
+                        <th> RECIEVE ADS VIA MAIL </th>
+                        <th> : </th>
+                        <!-- "checkbox" used (2/2)-->
+                        <th> <input type="checkbox" id="spammail" name="spammail" value="spammail" checked >
+                            <label for="spammail">YES</label> </th>
+                    </tr>
+                    <tr>
+                        <th class="alignright"><input class = "confirmbutton" type="submit" value = "SIGN UP"></th>
+                        <th></th>
+                        <th class="alignleft"><input class = "cancelbutton" type="reset" value = "CLEAR"></th>
+                    </tr>
+                </table>
+            </form>        
+                
+        </main>
+    </body>
+
+</html>
