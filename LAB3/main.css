@@ -1,0 +1,199 @@
+/* style sheet for IP HW3 */
+/* All Requirements are commented for your convenience :) */
+
+body{
+    text-align: center; background-color: black; color:white; font-size: 15px; font-family: Verdana, G  eneva, Tahoma, sans-serif;
+}
+
+h1{
+    color:white; font-size: 35px; font-family: Verdana, Geneva, Tahoma, sans-serif; padding: 0;
+}
+div{
+    border: 1em solid; text-align: center; border-width: medium; 
+}
+table{
+    width: 100%; align-self: center;
+}
+table tr th{
+    color:white; font-size: 20px; font-family: Verdana, Geneva, Tahoma, sans-serif; margin: 5px;
+}
+form{
+    text-align: center;
+}
+hr{
+    color:#04d9ff; border-color:#04d9ff; background-color: #04d9ff; height: 2px;
+}
+label{
+    color:white; font-size: 20px; font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+section{
+    column-count: 2; column-gap : 30px; column-rule : 1px outset white;
+}
+p{
+    color:white; font-size: 15px; font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.button_p{
+    font-size: 15px; border-color: blue; width: 100%; color:blue;
+}
+.button_np{
+    font-size: 15px; border-color: #04d9ff; width: 100%; color:#04d9ff;
+}
+.width50{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
+.fixed{
+    table-layout: fixed;
+}
+
+.fixedd{
+    table-layout: fixed;
+    width: 33%;
+}
+
+.neonblue{
+    color:#04d9ff;
+}
+.alignleft{
+    text-align: left;
+}
+.alignright{
+    text-align: right;
+}
+
+.confirmbutton{
+    padding: .5em; margin: .5em; height: 75%; width: 200px; color:white; 
+    font-size: 20px; background-color: black; border: 3px solid; border-color: #04d9ff; 
+}
+.cancelbutton{
+    padding: .5em; margin: .5em; height: 75%; width: 200px; color:white; 
+    font-size: 20px; background-color: black; border: 3px solid; border-color: #FA008A;
+}
+
+/* All components are in a flex container, and the max-width of the flex container is 1020px. */
+/* Thus, all visible components of index.html are within a width of 1020 pixels. */
+
+/* flex-direction, flex-wrap, justify-content used */
+
+.flex-container {
+    margin : auto;
+    display: flex;
+    max-width: 1020px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: left;
+    border: 0px;
+    align-items: center;
+}
+
+.flex-column {
+    margin : auto;
+    display: flex;
+    max-width: 1020px;
+    flex-direction: column;
+    border: 0px;
+    align-items: center;
+}
+
+.flex-row-2 {
+    display: flex;
+    max-width: 1020px;
+    flex-direction: row;
+    border: 0px;
+    align-items: center;
+}
+
+.row-wb {
+    position: relative;
+    display: flex;    
+    flex-direction: column;
+    width: 250px;
+    height: 250px;
+    border: 2px solid;
+    align-items: center;
+    justify-content: center;
+}
+
+.width1020 {
+    width : 100%;
+}
+
+/* @keyframes used for header animation : no JS code used! */
+@keyframes headermover {
+    0%   {left: 1020px;}
+    100% {left: 0px;}
+}
+
+/* animation-name, animation-duration used for header animation */
+.movingheader {
+    justify-content: left;
+    animation: headermover;
+    animation-name: headermover;
+    animation-duration: 2s;
+    position : relative;
+}
+
+.aligncenter{
+    justify-content: center;
+}
+
+/* transition used for enlarging image */
+img{
+    width: 100px;
+    transition: height 2s ease-in-out, width 2s ease-in-out;
+    justify-self: center;
+}
+
+/* hover used for enlarging image */
+.hoverimg:hover{
+    width : 150px; 
+}
+
+.imgwdesc{
+    position : relative;
+    width: 80%;
+}
+
+/* hover used for printing text on top of image */
+/* background color added to text for visibility */
+
+/* image and text should both probably load */
+.desctext{
+    color:white; 
+    background-color: #04d9ff;
+    font-size: 40px;
+
+    display : flex;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+}
+
+.desctext:hover{
+    opacity: 90%;
+}
+
+/* 'Navigation' and 'Main content' layout changed using @media queries and inheritance */
+/* All 3 cases considered */
+
+@media (max-width: 800px) {
+    .flex-container { flex-direction: column; }
+    .fixedd {width: 100%}
+    section{column-count: 1;}
+}
+
+@media (max-width: 480px) {
+    .flex-row-2 { flex-direction: column; }
+}
+    
+    

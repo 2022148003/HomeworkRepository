@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<!-- All requirements are commented for your convenience :) -->
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> IPSHOP </title>
+        <link rel ="stylesheet" type = "text/css" href = "main.css">
+    </head>
+    <body>
+        <header>
+            <!-- Slide  header text from right to left in a duration of 2s -->
+            <div class = "flex-container">
+                <h1 class= "movingheader"> IPSHOP : FOR ALL YOUR IP NEEDS </h1>
+            </div>
+            <!-- Link to Login page and Signup page (the 'Navigation') -->
+
+            <!-- 'Navigation' contained within a flex-container -->
+            <div class = "flex-container">
+                <table class = "fixedd">
+                    <tr>
+                        <th> <a href = "index.html"> <div class = "button_p"> Main </div> </a> </th>
+                    </tr>
+                </table>
+                <table class = "fixedd">
+                    <tr>
+                        <th> <a href = "login.html"> <div class = "button_np" > Log In </div> </a> </th>
+                    </tr>
+                </table>
+                <table class = "fixedd">
+                    <tr>
+                        <th> <a href = "signup.html"> <div class = "button_np"> Sign Up </div> </a> </th>
+                    </tr>
+                </table>
+            </div>
+            <div class = "flex-container"><hr class = "width1020"></div>
+        </header>
+        <main>
+            <!-- Main content made with nested flex containers with at least 4 'nestings' -->
+            <div class = "flex-column"> <!-- 1/4 nestings -->
+                <div class = "flex-column"> <!-- 2/4 nestings -->
+                    <div class = "flex-column">
+                        <h4> PAST EXAMS AND HOMEWORKS FOR : CSI2109.01-00 </h4>
+                    </div>
+                    <hr class = "width1020">
+                    <div class = "flex-container"> <!-- 3/4 nestings -->
+                        <div class = "flex-row-2"> <!-- 4/4 nestings -->
+                            <div class = "row-wb">
+                                <!-- This image enlarges when hovered over -->
+                                <img class = hoverimg src = "HW.png">
+                                <h4> Solution for HW1 </h4>
+                            </div>
+                            <div class = "row-wb">
+                                <img class = hoverimg src = "HW.png">
+                                <h4> Solution for HW2 </h4>
+                            </div>
+                        </div>
+                        <div class = "flex-row-2">
+                            <div class = "row-wb">
+                                <!-- This image displays text when hovered over -->
+                                <img class = imgwdesc src = "VID.png">
+                                <div class = "desctext">  Video explanation for HW1  </div>
+                            </div>
+                            <div class = "row-wb">
+                                <img class = imgwdesc src = "VID.png">
+                                <div class = "desctext"> Video explanation for HW2 </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class = "flex-column">
+                    <hr class = "width1020">
+                    <div class = "flex-column">  
+                        <h4> ABOUT OUR SHOP </h4>
+                    </div>
+                    <hr class = "width1020">
+                    <div class = "flex-column">
+                        <section>
+                            <p>Welcome to the Internet Programming Shop!
+                                As a student of Internet Programming, you know how challenging
+                                it can be to keep up with the course work and prepare for exams. 
+                                That's why we're here to help! Our shop specializes in providing 
+                                past exams and homework assignments for the Internet Programming class, 
+                                so you can study and prepare more effectively. Our materials are 
+                                carefully selected and compiled by experienced instructors, and are 
+                                designed to help you understand the key concepts and techniques covered 
+                                in the course. Whether you're struggling with a specific topic or 
+                                just looking for additional practice, our shop is the perfect resource
+                                for you. So why wait? Browse our selection today and take the 
+                                first step towards acing your Internet Programming class!</p>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>
