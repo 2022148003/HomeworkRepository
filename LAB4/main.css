@@ -1,0 +1,165 @@
+/* style sheet for IP HW4 */
+
+body{
+    text-align: center; background-color: black; color:white; font-size: 15px; font-family: Verdana, G  eneva, Tahoma, sans-serif;
+}
+
+h1{
+    color:white; font-size: 35px; font-family: Verdana, Geneva, Tahoma, sans-serif; padding: 0;
+}
+h4{
+    margin: 0; padding: 0;
+}
+div{
+    border: 1em solid; text-align: center; border-width: medium; 
+}
+table{
+    width: 100%; align-self: center;
+}
+table tr th{
+    color:white; font-size: 20px; font-family: Verdana, Geneva, Tahoma, sans-serif; margin: 5px;
+}
+form{
+    text-align: center;
+}
+hr{
+    color:#04d9ff; border-color:#04d9ff; background-color: #04d9ff; height: 2px;
+}
+label{
+    color:white; font-size: 20px; font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+section{
+    column-count: 2; column-gap : 30px; column-rule : 1px outset white;
+}
+p{
+    color:white; font-size: 15px; font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.button_p{
+    font-size: 15px; border-color: blue; width: 100%; color:blue;
+}
+.button_np{
+    font-size: 15px; border-color: #04d9ff; width: 100%; color:#04d9ff;
+}
+.width50{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
+.fixed{
+    table-layout: fixed;
+}
+
+.fixedd{
+    table-layout: fixed;
+    width: 33%;
+}
+
+.neonblue{
+    color:#04d9ff;
+}
+.alignleft{
+    text-align: left;
+}
+.alignright{
+    text-align: right;
+}
+
+.confirmbutton{
+    padding: .5em; margin: .5em; height: 75%; width: 200px; color:white; 
+    font-size: 20px; background-color: black; border: 3px solid; border-color: #04d9ff; 
+}
+.cancelbutton{
+    padding: .5em; margin: .5em; height: 75%; width: 200px; color:white; 
+    font-size: 20px; background-color: black; border: 3px solid; border-color: #FA008A;
+}
+
+.flex-container {
+    margin : auto;
+    display: flex;
+    max-width: 1020px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: left;
+    border: 0px;
+    align-items: center;
+}
+
+.flex-container-center {
+    margin : auto;
+    display: flex;
+    max-width: 1020px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    border: 0px;
+    align-items: center;
+}
+
+.flex-column {
+    margin : auto;
+    display: flex;
+    max-width: 1020px;
+    flex-direction: column;
+    border: 0px;
+    align-items: center;
+}
+
+.flex-row-2 {
+    margin : auto;
+    display: flex;
+    max-width: 1020px;
+    flex-direction: row;
+    border: 0px;
+    align-items: center;
+}
+
+.row-wb {
+    position: relative;
+    display: flex;    
+    flex-direction: column;
+    flex-basis: 33%;
+    width: 250px;
+    height: 250px;
+    border: 2px solid;
+    align-items: center;
+    justify-content: center;
+}
+
+.width1020 {
+    width : 100%;
+}
+
+.movingheader {
+    justify-content: center;
+    position : relative;
+}
+
+.aligncenter{
+    justify-content: center;
+}
+
+img{
+    width: 100px;
+    justify-self: center;
+}
+
+.hoverimg:hover{
+    width : 150px; 
+}
+
+@media (max-width: 800px) {
+    .flex-container { flex-direction: column; }
+    .fixedd {width: 100%}
+    section{column-count: 1;}
+    .row-wb{flex-basis: 50%;}
+}
+
+@media (max-width: 480px) {
+    .flex-row-2 { flex-direction: column; }
+    .row-wb{flex-basis: 100%;}
+}
+    
+    

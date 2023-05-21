@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+
+<!-- All requirements are commented for your convenience :) -->
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> IPSHOP </title>
+        <link rel ="stylesheet" type = "text/css" href = "main.css">
+        <script>
+                document.addEventListener("DOMContentLoaded", load);
+                window.addEventListener('scroll', infscroll);
+
+                let productlist = [];
+                let filteredlist = [];
+                let searchedlist = [];
+                let displaylist = [];
+                let loaduntill = 6
+
+                function load(){
+                    //has a fetch.json with product infos, used fetchAPI to fetch it
+                    fetch('product.json')
+                        .then(function(response){ 
+                            return response.json(); 
+                        })
+                        .then(function(json){
+                            productlist = json;
+                            searchedlist = productlist;
+                            displaylist = searchedlist.slice(0, loaduntill);
+                            loaditemdisplay();
+                        })
+                        .catch(function(error){ 
+                            console.log(error); 
+                        });
+                }
+
+                function infscroll(){
+                    //Infinite scroll
+                    const{scrollTop, scrollHeight, clientHeight} = document.documentElement;
+                        if(scrollTop + clientHeight >= scrollHeight){
+                            if(loaduntill < 33){
+                                    loaduntill = loaduntill + 3;    
+                                    displaylist = searchedlist.slice(0, loaduntill);
+                                refresh();
+                            }
+                        }
+                }
+
+                function refresh(){
+                    emptyitemdisplay();
+                    loaditemdisplay();
+                }
+                
+                function emptyitemdisplay(){
+                    const itemdisplay = document.getElementById('itemdisplay');
+                    while(itemdisplay.firstChild){
+                        itemdisplay.removeChild(itemdisplay.firstChild);
+                    }
+                }
+
+                function loaditemdisplay(){
+                    for(const item of displaylist){
+                        let name = item.type + " for week " + item.week;
+                        createItem(name, item.img, item.date, item.teacher, item.price);
+                    }
+                }
+
+                function createItem(name, url, date, teacher, price){
+                    const div = document.createElement('div');
+                    const img = document.createElement('img');
+                    const h4 = document.createElement('h4');
+                    const button = document.createElement("button");
+                    var isclicked = false;
+
+                    div.classList.add('row-wb');
+                    img.src = url;
+                    h4.textContent = name;
+                    button.textContent = 'Click to show more';
+                    button.addEventListener('click',()=>showmore());
+
+                    const itemdisplay = document.getElementById('itemdisplay');
+                    div.appendChild(img);
+                    div.appendChild(h4);
+                    div.appendChild(button);
+                    itemdisplay.appendChild(div);
+                    
+                        function showmore(){
+                            //uses JS to show descriptions when button is pressed
+                            if (!isclicked){
+                                isclicked = true;
+                                button.textContent = 'Click to show less';
+                                const h4d = document.createElement("h4");
+                                const h4t = document.createElement("h4");
+                                const h4p = document.createElement("h4");
+
+                                h4d.textContent = "Date: "+ date;
+                                h4t.textContent = "Teacher: "+ teacher;
+                                h4p.textContent = "Price: "+ price + "$";
+                                
+                                div.appendChild(h4d);
+                                div.appendChild(h4t);
+                                div.appendChild(h4p);
+                            }
+                            else{  
+                                    button.textContent = 'Click to show more';
+                                    isclicked = false;
+                                    for(let i = 0; i < 3; i++){
+                                        if(div.lastChild){
+                                            div.removeChild(div.lastChild);
+                                        }
+                                    }
+                                }
+                        }
+                    }
+
+                    document.addEventListener("DOMContentLoaded", function(){
+                        const searchButton = document.getElementById("search");
+                        searchButton.addEventListener("click", searchfor);
+                        function searchfor(){
+                            //search, filter, sort
+                            const keywordInput = document.getElementById("searchterm");
+                            const filterInput = document.getElementById("category");
+                            const sortInput = document.getElementById("sortby");
+                            const keyword = keywordInput.value.toLowerCase();
+                            searchedlist = [];
+                            filteredlist = [];
+
+                            for(const item of productlist){
+                                if(item.type == filterInput.value.trim() || filterInput.value == "All" || filterInput.value == ""){
+                                    filteredlist.push(item);
+                                }
+                            }
+                            for (const item of filteredlist) {
+                                const found = Object.values(item).some((value) => value.toString().toLowerCase().includes(keyword));
+                                if(found){
+                                    searchedlist.push(item);
+                                }
+                            }
+                            if(sortInput.value == "price"){
+                                searchedlist.sort((a, b) => a.price - b.price);
+                            }
+
+                            displaylist = searchedlist.slice(0, loaduntill);
+                            refresh();
+                        }
+                        });
+        </script>
+    </head>
+    <body>
+        <!--probably should all be inside 1020px-->
+        <header>
+            <div class = "flex-container-center">
+                <h1 class= "movingheader"> IPSHOP : FOR ALL YOUR IP NEEDS </h1>
+            </div>
+            <div class = "flex-container">
+                <!--linkings-->
+                <table class = "fixedd">
+                    <tr>
+                        <th> <a href = "index.html"> <div class = "button_p"> Main </div> </a> </th>
+                    </tr>
+                </table>
+                <table class = "fixedd">
+                    <tr>
+                        <th> <a href = "login.html"> <div class = "button_np" > Log In </div> </a> </th>
+                    </tr>
+                </table>
+                <table class = "fixedd">
+                    <tr>
+                        <th> <a href = "signup.html"> <div class = "button_np"> Sign Up </div> </a> </th>
+                    </tr>
+                </table>
+            </div>
+            <div class = "flex-container"><hr class = "width1020"></div>
+        </header>
+        <main>
+            <div class = "flex-column">
+                <div class = "flex-column">
+                    <div class = "flex-column">
+                        <h4> PAST EXAMS AND HOMEWORKS FOR : CSI2109.01-00 </h4>
+                    </div>
+                    <hr class = "width1020">
+                    <form>
+                        <input name="searchterm" id="searchterm" type="text" placeholder="searchterm" />
+                        <label for="category">Category:</label>
+                        <select name="category" id="category">
+                            <option value="Video">Videos</option>
+                            <option value="Exams">Exams</option>
+                            <option value="HomeworkSolutions">Homework Solutions</option>
+                            <option value="All" selected>All</option>
+                        </select>
+                        <label for="sortby">Sort By:</label>
+                        <select name="sortby" id="sortby">
+                            <option value="price">Price</option>
+                            <option value="none" selected>None</option>
+                        </select>
+                        <input id="search" type="button" value="search" class="confirmbutton" />
+                    </form>
+                    <hr class = "width1020">
+                    <div class = "flex-container" id = "itemdisplay"> 
+                        <!-- itemdisplay -->
+                    </div>
+                </div>
+                <div class = "flex-column">
+                    <hr class = "width1020">
+                    <div class = "flex-column">  
+                        <h4> ABOUT OUR SHOP </h4>
+                    </div>
+                    <hr class = "width1020">
+                    <div class = "flex-column">
+                        <section>
+                            <p>Welcome to the Internet Programming Shop!
+                                As a student of Internet Programming, you know how challenging
+                                it can be to keep up with the course work and prepare for exams. 
+                                That's why we're here to help! Our shop specializes in providing 
+                                past exams and homework assignments for the Internet Programming class, 
+                                so you can study and prepare more effectively. Our materials are 
+                                carefully selected and compiled by experienced instructors, and are 
+                                designed to help you understand the key concepts and techniques covered 
+                                in the course. Whether you're struggling with a specific topic or 
+                                just looking for additional practice, our shop is the perfect resource
+                                for you. So why wait? Browse our selection today and take the 
+                                first step towards acing your Internet Programming class!</p>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>

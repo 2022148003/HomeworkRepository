@@ -1,0 +1,267 @@
+[
+    {
+      "week": 1,
+      "type": "Video",
+      "date": "3/1",
+      "teacher": "Lee Bongpal",
+      "price": 0.5,
+      "img": "VID.png"
+    },
+    {
+      "week": 1,
+      "type": "Video",
+      "date": "3/3",
+      "teacher": "Lee Bongpal",
+      "price": 0.8,
+      "img": "VID.png"
+    },
+    {
+      "week": 2,
+      "type": "HomeworkSolutions",
+      "date": "3/8",
+      "teacher": "Kim Byeongchun",
+      "price": 2.3,
+      "img": "HW.png"
+    },
+    {
+      "week": 2,
+      "type": "HomeworkSolutions",
+      "date": "3/10",
+      "teacher": "Kim Byeongchun",
+      "price": 2.1,
+      "img": "HW.png"
+    },
+    {
+      "week": 3,
+      "type": "Exams",
+      "date": "3/15",
+      "teacher": "Kang Dooho",
+      "price": 5.3,
+      "img": "EXAM.png"
+    },
+    {
+      "week": 3,
+      "type": "Exams",
+      "date": "3/17",
+      "teacher": "Kang Dooho",
+      "price": 5,
+      "img": "EXAM.png"
+    },
+    {
+      "week": 4,
+      "type": "Video",
+      "date": "3/22",
+      "teacher": "Amir Gupta",
+      "price": 0.4,
+      "img": "VID.png"
+    },
+    {
+      "week": 4,
+      "type": "Video",
+      "date": "3/24",
+      "teacher": "Amir Gupta",
+      "price": 1.3,
+      "img": "VID.png"
+    },
+    {
+      "week": 5,
+      "type": "HomeworkSolutions",
+      "date": "3/29",
+      "teacher": "Hassan Zahir",
+      "price": 2.4,
+      "img": "HW.png"
+    },
+    {
+      "week": 5,
+      "type": "HomeworkSolutions",
+      "date": "3/31",
+      "teacher": "Hassan Zahir",
+      "price": 2.1,
+      "img": "HW.png"
+    },
+    {
+      "week": 6,
+      "type": "Exams",
+      "date": "4/5",
+      "teacher": "Lee Bongpal",
+      "price": 5.3,
+      "img": "EXAM.png"
+    },
+    {
+      "week": 6,
+      "type": "Exams",
+      "date": "4/7",
+      "teacher": "Lee Bongpal",
+      "price": 6,
+      "img": "EXAM.png"
+    },
+    {
+      "week": 7,
+      "type": "Video",
+      "date": "4/12",
+      "teacher": "Kim Byeongchun",
+      "price": 0.1,
+      "img": "VID.png"
+    },
+    {
+      "week": 7,
+      "type": "Video",
+      "date": "4/14",
+      "teacher": "Kim Byeongchun",
+      "price": 0.8,
+      "img": "VID.png"
+    },
+    {
+      "week": 8,
+      "type": "HomeworkSolutions",
+      "date": "4/19",
+      "teacher": "Kang Dooho",
+      "price": 2.1,
+      "img": "HW.png"
+    },
+    {
+      "week": 8,
+      "type": "HomeworkSolutions",
+      "date": "4/21",
+      "teacher": "Kang Dooho",
+      "price": 4,
+      "img": "HW.png"
+    },
+    {
+      "week": 9,
+      "type": "Exams",
+      "date": "4/26",
+      "teacher": "Amir Gupta",
+      "price": 5.2,
+      "img": "EXAM.png"
+    },
+    {
+      "week": 9,
+      "type": "Exams",
+      "date": "4/28",
+      "teacher": "Amir Gupta",
+      "price": 5.1,
+      "img": "EXAM.png"
+    },
+    {
+      "week": 10,
+      "type": "Video",
+      "date": "5/3",
+      "teacher": "Hassan Zahir",
+      "price": 0.5,
+      "img": "VID.png"
+    },
+    {
+      "week": 10,
+      "type": "Video",
+      "date": "5/5",
+      "teacher": "Hassan Zahir",
+      "price": 0.9,
+      "img": "VID.png"
+    },
+    {
+      "week": 11,
+      "type": "HomeworkSolutions",
+      "date": "5/10",
+      "teacher": "Lee Bongpal",
+      "price": 2.9,
+      "img": "HW.png"
+    },
+    {
+      "week": 11,
+      "type": "HomeworkSolutions",
+      "date": "5/12",
+      "teacher": "Lee Bongpal",
+      "price": 2.2,
+      "img": "HW.png"
+    },
+    {
+      "week": 12,
+      "type": "Exams",
+      "date": "5/17",
+      "teacher": "Kim Byeongchun",
+      "price": 5.1,
+      "img": "EXAM.png"
+    },
+    {
+      "week": 12,
+      "type": "Exams",
+      "date": "5/19",
+      "teacher": "Kim Byeongchun",
+      "price": 7.2,
+      "img": "EXAM.png"
+    },
+    {
+      "week": 13,
+      "type": "Video",
+      "date": "5/24",
+      "teacher": "Kang Dooho",
+      "price": 5.3,
+      "img": "VID.png"
+    },
+    {
+      "week": 13,
+      "type": "Video",
+      "date": "5/26",
+      "teacher": "Kang Dooho",
+      "price": 3.5,
+      "img": "VID.png"
+    },
+    {
+      "week": 14,
+      "type": "HomeworkSolutions",
+      "date": "5/31",
+      "teacher": "Amir Gupta",
+      "price": 2.7,
+      "img": "HW.png"
+    },
+    {
+      "week": 14,
+      "type": "HomeworkSolutions",
+      "date": "6/2",
+      "teacher": "Amir Gupta",
+      "price": 2.4,
+      "img": "HW.png"
+    },
+    {
+      "week": 15,
+      "type": "Exams",
+      "date": "6/7",
+      "teacher": "Hassan Zahir",
+      "price": 5.9,
+      "img": "EXAM.png"
+    },
+    {
+      "week": 15,
+      "type": "Exams",
+      "date": "6/9",
+      "teacher": "Hassan Zahir",
+      "price": 5.2,
+      "img": "EXAM.png"
+    },
+    {
+      "week": 16,
+      "type": "Video",
+      "date": "6/14",
+      "teacher": "Lee Bongpal",
+      "price": 0.3,
+      "img": "VID.png"
+    },
+    {
+      "week": 16,
+      "type": "Video",
+      "date": "6/16",
+      "teacher": "Lee Bongpal",
+      "price": 0.7,
+      "img": "VID.png"
+    },
+    {
+        "week": 17,
+        "type": "Video",
+        "date": "6/19",
+        "teacher": "Amir Gupta",
+        "price": 10,
+        "img": "VID.png"
+    }
+  ]
+  
